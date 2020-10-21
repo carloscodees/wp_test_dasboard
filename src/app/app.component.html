@@ -1,21 +1,30 @@
 <div class="container">
-    <div class="card card-add" routerLink="#seccion1">
-        <h2>+</h2>
+    <div class="card card-add"  (click)="setActualCard('add')">
+        <span>+</span>
     </div>
 
-    <div class="card" routerLink="#seccion2">
-        <h2>Card2</h2>
+    <div *ngFor="let card of cards" >
+        <div class="card" (click)="setActualCard(card)" >
+            <h2>{{card}}</h2>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>Card3</h2>
+</div>
+<!-- <ng-container [ngSwitch]="actualCard">
+
+    <div *ngSwitchCase="'card1'" [@slide]>
+        <app-seccion1 [title]="actualCard" [@enterTrigger]="'fadeIn'"></app-seccion1>
+    </div>
+    <div *ngSwitchCase="'card2'" [@slide]>
+        <app-seccion1 [title]="actualCard" [@enterTrigger]="'fadeIn'"></app-seccion1>
+
+    </div>
+    <div *ngSwitchCase="'card3'" [@slide]>
+        <app-seccion1 [title]="actualCard" [@enterTrigger]="'fadeIn'"></app-seccion1>
+
     </div>
 
-    <div class="card">
-        <h2>Card3</h2>
-    </div>
+</ng-container> -->
 
-
-</div>    
-
-<router-outlet></router-outlet>
+<app-tema [title]="actualCard"></app-tema>
+<app-new-tema *ngIf="actualCard == 'add'"></app-new-tema>

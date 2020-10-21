@@ -1,0 +1,20 @@
+.input-form{
+    margin: 20px;
+}
+
+.question__container,.options__container{
+    margin: 16px;
+    border: 1px solid purple;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.options__container{
+    border: 1px solid pink;
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}

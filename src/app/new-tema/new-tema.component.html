@@ -1,0 +1,33 @@
+<section>
+    <h1>Crea tu nuevo tema</h1>
+    <form [formGroup]="temaForm" (ngSubmit)="onSubmit()" class="tema__form">
+        <div>
+            <div class="input__container">
+                <label for="name">
+                    Titulo del tema
+                    <input type="text" name="name" class="styled-input" formControlName="name" placeholder="Titulo">
+                </label>
+                <label for="time">
+                    Limite de tiempo
+                    <input type="time" name="limitTime" class="styled-input" formControlName="limitTime">
+                </label>
+            </div>
+            <div class="add__question__container">
+                <h1>Añadir pregunta</h1>
+                <div class="questions">
+                    <app-new-question [controlsArray]="temaForm.controls.questions"
+                        (getCorrectOption)="getCorrectOption($event)"></app-new-question>
+                </div>
+                <div class="add__question card card-add" (click)="addQuestions()">
+                    <span>+</span>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="Guardar">
+    </form>
+</section>
+
+
+<!-- <div class="input__container">
+    <input type="text" name="name"  formControlName="name">
+</div> -->

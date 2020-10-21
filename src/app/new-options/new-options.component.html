@@ -1,0 +1,14 @@
+<div *ngFor="let option of  options;  index as indexB">
+    <label for="option-{{indexB}}">Opcion ({{indexB}}):
+        <input type="text" name="name-{{indexB}}" [formControl]="option" class="styled-input">
+        <div class="add__small card card-add add__small--delete" 
+        (click)="removeOption(indexB)"
+        *ngIf="options.length > 1">
+            <span>-</span>
+        </div>
+    </label>
+    <!-- <input type="radio" name="correctOption" [value]="i" (change)="changeOpt(i)">  -->
+</div>
+<div class="add__small card card-add" (click)="addOption()" *ngIf="options.length < 4">
+    <span>+</span>
+</div>

@@ -5,3 +5,100 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body{
     background: rgb(245, 245, 245);
 }
+
+
+.card{
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height:  150px;
+    box-shadow: 16px 16px 20px -19px rgba(128, 128, 128, 0.5), -10px -2px 20px -7px rgb(255 255 255);
+    margin: 25px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 300ms;
+    color: #741ed2;
+
+}
+
+.card-add span{
+    font-size: 35px;
+    transition: 600ms;
+}
+
+
+.card:hover {
+    transform: translate(-8px, -5px);
+    box-shadow: 23px 16px 20px -19px rgba(128, 128, 128, 0.5), -10px -2px 20px -7px rgb(255 255 255);
+
+}
+
+.card-add:hover span{
+    transform: rotate(360deg) ;
+    font-size: 50px;
+}
+
+ .styled-input{
+
+    border-radius: 16px;
+    padding: 6px 12px;
+    color: rgb(122, 122, 122);
+    margin-right: 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    transition: 300ms;
+   box-shadow:  16px 16px 20px -15px rgba(128, 128, 128, 0.5)
+
+}
+.styled-input:focus{
+
+    box-shadow: 0px 0px 7px #833ad173;
+
+}
+
+ input[type="submit"]{
+
+    border-radius: 16px;
+    color: white;
+    background: linear-gradient(41deg, #741ed2, #ab71ea);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 6px 12px;
+   box-shadow:  16px 16px 20px -15px rgba(128, 128, 128, 0.5);
+    transition: 300ms;
+
+}
+ input[type="submit"]:hover{
+
+transform: translate(-3px, -2px);
+}
+
+
+.add__small{
+    width: 40px;
+    height:  40px;
+    color: white;
+    background: #741ed2;
+    font-size: 35px;
+}
+
+.add__small:hover span{
+    transform: none;
+    font-size: 35px;
+}
+.add__small:hover{
+    background: #751ed2dc;
+
+}
+
+
+.add__small__container h1{
+    margin-right: 20px;
+
+}

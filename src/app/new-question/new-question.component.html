@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+        <h1>Preguntas</h1>
+    </div>
+
+    <div *ngFor="let control of  controlsArray.controls;  index as idexA " class="input-form">
+        <form [formGroup]="control">
+            <!-- <span>{{i}}</span> -->
+            <div class="question__container">
+                <label for="question-{{idexA}}">Pregunta:
+                    <input type="text" name="question-{{idexA}}" formControlName="question" class="styled-input">
+                </label>
+                <h3>Opciones</h3>
+                <div class="options__container">
+                    <app-new-options [options]="control.controls.options.controls"></app-new-options>
+                    <!-- <div *ngFor="let option of  control.controls.options.controls;  index as indexB">
+                        <label for="option-{{indexB}}">Opcion ({{indexB}}):
+                            <input type="text" name="name-{{indexB}}" [formControl]="option" class="styled-input">
+                        </label>
+                         <input type="radio" name="correctOption" [value]="i" (change)="changeOpt(i)"> 
+                    </div> -->
+                </div>
+            </div>
+        </form>
+    </div>
